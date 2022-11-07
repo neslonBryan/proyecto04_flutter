@@ -11,7 +11,7 @@ class CardPage extends StatelessWidget {
         title: const Text("Card Page"),
       ),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
             margin: const EdgeInsets.all(15),
@@ -71,6 +71,102 @@ class CardPage extends StatelessWidget {
               ],
             ),
           ),
+          Container(
+            margin: const EdgeInsets.all(15),
+            padding: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20.0),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.5),
+                  blurRadius: 12.0,
+                  offset: Offset(2, 4),
+                ),
+                BoxShadow(
+                  color: Colors.white.withOpacity(0.5),
+                  offset: Offset(-2, -4),
+                  blurRadius: 12.0,
+                ),
+              ],
+            ),
+            child: Row(
+              children: [
+                Image.asset(
+                  "assets/images/imagen1.png",
+                  height: 120.0,
+                ),
+                Expanded(
+                  child: Column(
+                    children: const [
+                      Text(
+                        "Fiorela Guadalupe de las Flores Azules",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
+                      Text(
+                        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia",
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 4,
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(
+                          color: Colors.black54,
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.all(15),
+            padding: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20.0),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.5),
+                  blurRadius: 12.0,
+                  offset: Offset(2, 4),
+                ),
+                BoxShadow(
+                  color: Colors.white.withOpacity(0.5),
+                  offset: Offset(-2, -4),
+                  blurRadius: 12.0,
+                ),
+              ],
+            ),
+            child: Row(
+              children: [
+                const Expanded(
+                  child: Text(
+                    "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia",
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 7,
+                    textAlign: TextAlign.justify,
+                  ),
+                ),
+                const SizedBox(
+                  width: 10.0,
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Image.asset(
+                    "assets/images/paisaje.jpeg",
+                    height: 110,
+                  ),
+                )
+              ],
+            ),
+          )
         ],
       ),
     );
