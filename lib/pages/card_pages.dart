@@ -11,7 +11,7 @@ class CardPage extends StatelessWidget {
         title: const Text("Card Page"),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
             margin: const EdgeInsets.all(15),
@@ -154,7 +154,7 @@ class CardPage extends StatelessWidget {
                     textAlign: TextAlign.justify,
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   width: 10.0,
                 ),
                 ClipRRect(
