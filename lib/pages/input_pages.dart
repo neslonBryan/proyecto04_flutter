@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class InputPage extends StatelessWidget {
   const InputPage({super.key});
@@ -31,7 +32,7 @@ class InputPage extends StatelessWidget {
               maxLines: 1,
               textAlign: TextAlign.center,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             TextField(
@@ -50,6 +51,59 @@ class InputPage extends StatelessWidget {
                   borderSide: BorderSide(
                     color: Colors.blue,
                     width: 3,
+                  ),
+                ),
+              ),
+              onChanged: (String value) {
+                print(value);
+              },
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.7),
+                    offset: Offset(4, 4),
+                    blurRadius: 12.0,
+                  ),
+                ],
+              ),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: "Buscar producto....",
+                  hintStyle: GoogleFonts.poppins(
+                    fontSize: 20.0,
+                    color: Colors.black,
+                  ),
+                  fillColor: Colors.white,
+                  filled: true,
+                  suffixIcon: Container(
+                    margin: EdgeInsets.only(right: 8, top: 2, bottom: 2),
+                    decoration: BoxDecoration(
+                      color: Colors.green,
+                      borderRadius: BorderRadius.circular(14),
+                    ),
+                    child: Icon(
+                      Icons.search,
+                      size: 30,
+                      color: Colors.white,
+                    ),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(7),
+                    borderSide: BorderSide(
+                      width: 0,
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(7),
+                    borderSide: BorderSide(
+                      width: 0.5,
+                      color: Colors.black,
+                    ),
                   ),
                 ),
               ),
